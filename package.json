@@ -1,0 +1,40 @@
+{
+  "name": "electron_curso",
+  "version": "1.0.0",
+  "description": "App de exemplo do curso",
+  "main": "main.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development electron .",
+    "build": "cross-env NODE_ENV=production electron-builder -p always",
+    "build:dir": "cross-env NODE_ENV=production electron-builder --dir",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marlon <marlonferreira@hotmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "electron-updater": "^4.0.6",
+    "mousetrap": "^1.6.3"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "electron": "^5.0.2",
+    "electron-builder": "^20.43.0",
+    "electron-reload": "^1.4.0"
+  },
+  "build": {
+    "appId": "com.schoolofnet.electon-curso",
+    "productName": "Avancando com Electron",
+    "publish": {
+      "provider": "github",
+      "owner": "MarlonFerreira",
+      "repo": "avancando-com-electron"
+    },
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "tray.png",
+      "target": "nsis"
+    }
+  }
+}
